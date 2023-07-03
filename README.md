@@ -2,12 +2,12 @@ Welcome to my internet of things project, my name is Mostafa Hussein and i have 
 For this project we want somthing that tells us when a box/drawer has been opened by someone els other than yourself.
 This project took me a bit longer than a week to complete. That said it was a lot of testing and experimenting done. With this guide it should be possible to do within a couple of days or even a day if you really spend the time.
 
-Objective
+<h1>Objective</h1>
 
 I live with two siblings and sometimes personal drawers and boxes isnt considerd personal to them, this project is made so that i always know if somone is going thru my personal stuff.
 This will give me the insite and information about if my peronal stuff stays personal.
 
-Material
+<h1>Material</h1>
 
 The materials needed to do this project is as listed:
 
@@ -29,7 +29,7 @@ The materials needed to do this project is as listed:
 Total cost of everything is 306Kr which is about 25.89 Euro
 
 
-Computer setup
+<h1>Computer setup</h1>
 
 For the computer setup free programs are used to do all the coding and addons for the pico.
 We are using visual studio code which you can download here: https://code.visualstudio.com/download.
@@ -46,9 +46,9 @@ When visual studio code is downloaded you need pymakr
 
 ![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/eba11533-51d2-452a-bdbf-5d4a931c285f)
 
-Now the you have eveything needed on the computer, next step is 1. Firmware update
+Now the you have eveything needed on the computer, next step is Firmware update
 
-Firmware update
+<h1>Firmware update </h1>
 
 Download and update the board micropython firmware, this is done so that the pico understand python.
 
@@ -90,7 +90,7 @@ You should be getting reply in the console looking like this ![image](https://gi
 
 If you got the reply then everything is working!
 
-Putting everything together
+<h1>Putting everything together</h1>
 
 Here we will go thru how to connect all the sensors and where the cables needs to go
 We will start with putting the pico on the breadboard and connect VBUS to the + area and ground to - area like on the picture below.
@@ -98,4 +98,9 @@ We will start with putting the pico on the breadboard and connect VBUS to the + 
 
 ![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/ec8a0de3-2ea3-4026-b7ad-8b0539512f64)
 
-After doing this connect the usb and make the print code line again to see that everything is working. ALWAYS DISCONNECT THE USB FROM POWERSOURCE WHEN REMOVING OR ADDING SENSORS OR CABLES.
+After doing this connect the usb and make the print code line again to see that everything is working. <p>ALWAYS DISCONNECT THE USB FROM POWERSOURCE WHEN REMOVING OR ADDING SENSORS OR CABLES</p>
+<h2>LED_RGB</h2>
+Now for our first sensor which will be the LED_RGB, for this one four cables is needed and you will connect them like the picture below. A tip when before connecting the wires is to look at the charachters on the sensor, very often there will be markers for where the pin should be connected too, in this case with the LED there is a (-) sign which means that it needs to be connected to ground. Ground being negative marked places on the breadboard or ground pins on the pico if a breadboard is not used.
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/d68f56d7-df17-4bce-96e1-34ecde65de70)
+
