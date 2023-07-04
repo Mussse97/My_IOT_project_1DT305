@@ -224,10 +224,11 @@ Active:
 
 This is how i would attach it to my box at home, i would need to buy somthing to hold it to the roof of the box:
 
-Här.......
 
-<h2>What i could of added</h2>
+https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/d2ba5194-307e-4bcd-af03-2ede998da6d7
 
+This is not the best way of showinbg the alarm, i didn't have a good enough way of securing the alarm on the top of the roof without it falling down. This video is only when the roof is up.
+<h2>What could have been added</h2>
 I had some really interesting ideas to add but came up with them last second and was a bit hard to do. The thought was that it might get a bit annoying if the alarm goes off even if its me that openes it. The plan was to input code so that it would be able to differentiate me from others. My first idea was that it would check if my phone was connected to the home wifi and if i was mening om home, the alarm wouldnt go off. If om not connected then somone els would be opening it. This didnt work because i would need the mac-adress and i couldnt make the pico access that information which you could find on yout router website.
 
 the other plan was to connect to bluetooth and apply the same idea but that wasnt possible and later found out i could do it but i would need to have a blutooth modem. I think that this addition to the project would make it a lot better and is 100% somthing im going to add in the near future. 
