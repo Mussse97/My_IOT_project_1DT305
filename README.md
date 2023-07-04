@@ -188,4 +188,49 @@ The picture above shows the code added to make this transmition work. The code a
 
 <h1>Presenting the data </h1>
 
+Now for the last part of this project, showing the data that we sent to Ubidots. We start of with creating two events:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/b5e3b03f-f277-4248-8f54-bccc4c1d6809)
+
+Ubidots will not listen for data thats 0 or 1. For the visual part nothing fancy is needed, the only thing we want to know is if the value change and a nice switch with a color that represent if the box is in danger or not.
+
+![Off](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/2df3100b-4bfe-478e-96fe-481108886af7)
+
+As we can see on the picture above we are only using two widgets which is a "Guage" and a "indicator" widget. On the picture we see that the value is 0 and the indicator is green with a message that says "off".
+
+This is a good visual representation of the box not being opened.
+
+![On](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/008abb8e-9db2-498a-a9db-90ca141fb49f)
+
+With the other event being 1, meaning somone is opening the box. We see the guage turning to 1 and the indicator turning the color red with the message being "ON". Now we know that the box has been opened.
+
+When looking at the data more indepth which we can do if we enter "explore data" in ubidots. We are greeted with a layout like this: 
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/bd7c4ff8-c1cc-472e-bb35-084aca170c05)
+
+Here we can se what time the sensor sent data and what value it gave. The times in this picture is a bit inconsistent because the pico was unplugged multiple times when experimenting with other stuff. If connected and not removed from power you should have a consistent update every 5 seconds.
+
+<h1>Finalizing the design </h1>
+
+Overall this project was a lot of fun to make and experiment with. The goal i had with this was achieved and im very happy with the result. Here are some pictures of the sensor in its different modes.
+
+Not active:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/15c549b6-7db0-4dc1-97ff-e5d7baa382f6)
+
+Active:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/24636eee-0f99-4750-8868-a4357ce42626)
+
+This is how i would attach it to my box at home, i would need to buy somthing to hold it to the roof of the box:
+
+Här.......
+
+<h2>What i could of added</h2>
+
+I had some really interesting ideas to add but came up with them last second and was a bit hard to do. The thought was that it might get a bit annoying if the alarm goes off even if its me that openes it. The plan was to input code so that it would be able to differentiate me from others. My first idea was that it would check if my phone was connected to the home wifi and if i was mening om home, the alarm wouldnt go off. If om not connected then somone els would be opening it. This didnt work because i would need the mac-adress and i couldnt make the pico access that information which you could find on yout router website.
+
+the other plan was to connect to bluetooth and apply the same idea but that wasnt possible and later found out i could do it but i would need to have a blutooth modem. I think that this addition to the project would make it a lot better and is 100% somthing im going to add in the near future. 
+
+
 
