@@ -23,7 +23,7 @@ The materials needed to do this project is as listed:
 
  LED-modul RGB 19kr, link: https://www.electrokit.com/produkt/led-modul-rgb/
 
- Pizo speaker passive 36kr, link:https://www.electrokit.com/produkt/piezohogtalare-passiv/
+ Pizo buzzer passive 36kr, link:https://www.electrokit.com/produkt/piezohogtalare-passiv/
 
 
 Total cost of everything is 306Kr which is about 25.89 Euro
@@ -103,4 +103,89 @@ After doing this connect the usb and make the print code line again to see that 
 Now for our first sensor which will be the LED_RGB, for this one four cables is needed and you will connect them like the picture below. A tip when before connecting the wires is to look at the charachters on the sensor, very often there will be markers for where the pin should be connected too, in this case with the LED there is a (-) sign which means that it needs to be connected to ground. Ground being negative marked places on the breadboard or ground pins on the pico if a breadboard is not used.
 
 ![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/d68f56d7-df17-4bce-96e1-34ecde65de70)
+
+<h2>Piezzo buzzer passive</h2>
+
+This is the sensor that will emit sound, for this sensor three cables will be connected to the board. We want the connections to be with a ground, 3,3 volt and a GPIO pin. The cables will be connected as following:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/152490f3-4027-4bdb-b314-b9fc5bd67cf2)
+
+<h2>Tiltsensor</h2>
+
+The last sensor that needs to be connected will be the tiltsensor or tiltswitch. three more cables are needed which will be connected to the ground (Negative part of the breadboard), possitive side of the breadboard and a GPIO pin. Follow the connections shown in the picture below.
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/a083aa28-8920-43da-b8fe-95a2e7bf8007)
+
+Now all the sensors all connected and you should have somthing looking like the picture below
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/549df1af-c0f6-478d-b375-0c7c50078d8a)
+
+Better cable management is possible and should maby be considered if the box or drawer isnt big enough
+
+<h1>Platform</h1>
+
+Platform is an important step to configure because we want the data that we gather with the code to go somewhere that can be analysed  and make it more visually presentable. For this project the platform that is used is called Ubidots. Ubidots is an IoT Platform where you can prototype your iot projects to production. You can use Ubidots platform to send data to the cloud from any Internet-enabled device. You can then configure actions and alerts based on your real-time data and unlock the value of your data through visual tools. Ubidots offers a REST API that allows you to read and write data to the resources available: data sources, variables, values, events and insights. The API supports both HTTP and HTTPS and an API Key is required.
+
+There are other platform like Adafruit that can do the same thing. I liked the layout and found it way easier to use Ubidots and thats why its used on this project.
+
+Ubidots isn't a free platform but you are able to create an account with a 30 day free trail. The free trail will be enough time for us to do this project and use it in production for a while, if you want it longer then you might want to pay or find a free alternative.
+
+<h1>The code</h1>
+
+Its time to start coding! We start with the libraries used for this project because that is usually what you put in before functions. These are the libraries we import:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/00d14774-50b1-470f-a284-6290f0ac0cb6)
+
+Next important step is to set a variable name for the different sensors from the pin that was connected, if you have followed this guide then these should be the right pins:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/b105b1ba-49ce-4950-9e3c-0af349d4dd1a)
+
+Instead of pasting all the code in this guide i will go through the most intresting thing which is the alarm sound.
+
+For the buzzer to emit sound we need to define som tones in a list just like this:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/aa55e167-c9b0-4a02-9ed5-9e9510b98d5e)
+
+This is where the fun begins, there is no real right anwser here for which notes to pick. We start with creating a variable that has a couple of notes called "tones_sequence". It should look like this:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/1de19b1c-a73a-4633-89f4-7441eb57e0cb)
+
+In "tones_sequence" we tell the buzzer which notes to emit and when to take pauses and this is done by the "sleep" line and "play_tone". "play_tone" is a def that we created here:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/cbd3c945-4bb3-4423-be7a-c5611369254c)
+
+In this def we also tell it how loud is should be which is done witch "buzzer.duty_u16(5000)".
+
+The code as a whole is actually very simple. Our main sensor is the tiltswitch which has two values (0 and 1). Number 1 being when its moving or sensing change in tilt and 0 when its still.
+
+we start with a while true function where we give a name to the tiltvalue: ![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/e35ed47f-eff1-4c8d-b836-dba024176ede)
+
+After this we put in the main if statement:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/94b62d67-411f-4a14-8d7d-506bf0ea3f6b)
+
+So what this does is checks if the sensor is detecting any movement then the LED light blinks and the play_warning_sound is active. Now a visual warning and a sound warning active for the person that touches your box to see. This should be enough to stop someone from touching your stuff. With this you have a lot of customization options when it comes to the sound and the light. As you can se in the code we only defined three colores:
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/58d2e0d8-8ec1-4b8e-b135-b5e2b96e066f)
+
+But having more than one active so for example if you would type :![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/06ff2e1f-a3f9-4251-bf37-0908666d28ea)
+
+Then a purple light would appear. I encourage to try out with different tones and mixing the colors to get it just how you like it.
+
+<h1>Transmitting the data / connectivity </h1>
+
+For the transmition of the data we are using wifi as our connectivity. Wifi isnt the best option because it will eat into the battery life, a great option is LoRaWan if you have great connection to helium or ttn (the things network). In my case i had no connection near me with ttn. Even tho i had server all around me with helium it would take a long time to connect and i made the desition in the end to go with somtihing a bit easier like wifi. LoRaWAN also requires to connect a modem to the breadborard that will make it bigger. My box didnt suppert the extra modem.
+
+The data we want to send is the values that comes from the tiltswitch that is 1 and 2. This transmition is "triggerd" which means a change in the sensor and not somting we do manually.
+
+Connecting to the wifi is very simple and requires you to type in the home wifi name_SSID and password. Then in a file you would call boot.py you put in the code for connectiviy. You can find this uploaded to this Github repository.
+
+![image](https://github.com/Mussse97/My_IOT_project_1DT305/assets/89797827/9ea240e4-c7fc-4ae3-85a2-5b46e2bfc5d1)
+
+The picture above shows the code added to make this transmition work. The code above the "else" is in the if statement, we are sending the data with the number 1 which means the box was opened and we put a sleep because we dont want to send to many request. If we send to much and fast data it could result in a ban where you are not alowed to send more. For this we make it sleep for five secounds. This means that every five second it starts over and sends the new value.
+
+
+
+<h1>Presenting the data </h1>
+
 
