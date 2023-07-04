@@ -123,11 +123,6 @@ def sendData(device, variable, value):
         pass
 
 
-
-
-
-
-
 while True:
     tilt_value = tiltPin.value()
     
