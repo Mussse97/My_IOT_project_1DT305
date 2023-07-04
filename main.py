@@ -127,7 +127,6 @@ while True:
     tilt_value = tiltPin.value()
     
     if tiltPin.value() == 1:
-       
       print("Tilt value:", tilt_value)
       LED_Pin_Blue.value(1)
       play_warning_sound()
