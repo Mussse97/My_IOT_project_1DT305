@@ -6,11 +6,11 @@ import network
 import urequests as requests
 import random
 
-TOKEN = "BBFF-qpFtFVLCeSkvC3GJ1GoeZgSapYFIor" #Put here your TOKEN
-DEVICE_LABEL = "PicoAlarmBoard" # Assign the device label desire to be send
-VARIABLE_LABEL = "Sensor"  # Assign the variable label desire to be send
-WIFI_SSID = "TP-Link_6D02" # Assign your the SSID of your network
-WIFI_PASS = "Hussein123" # Assign your the password of your network
+TOKEN = "xxxxxxx" #Put here your TOKEN
+DEVICE_LABEL = "xxxxxxxx" # Assign the device label desire to be send
+VARIABLE_LABEL = "xxxxxx"  # Assign the variable label desire to be send
+WIFI_SSID = "xxxxxx" # Assign your the SSID of your network
+WIFI_PASS = "xxxxxxx" # Assign your the password of your network
 DELAY = 5  # Delay in seconds
 
 LED_Pin_Red = Pin(26, Pin.OUT)
