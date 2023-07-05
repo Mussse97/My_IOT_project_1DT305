@@ -11,7 +11,7 @@ This will give me the insite and information about if my peronal stuff stays per
 
 The materials needed to do this project is as listed:
 
- Raspberry Pi Pico WH 65kr,  link: https://www.electrokit.com/produkt/raspberry-pi-pico/
+ Raspberry Pi Pico WH 109r,  link: https://www.electrokit.com/produkt/raspberry-pi-pico-wh/
 
  Breadboard 840 connections 69kr, link: https://www.electrokit.com/produkt/kopplingsdack-840-anslutningar/
 
