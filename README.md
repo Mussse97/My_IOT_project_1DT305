@@ -18,7 +18,7 @@ The materials needed to do this project is as listed:
 
  USB 2.0. USB A to USB micro B 39kr, link: https://www.electrokit.com/produkt/usb-kabel-a-hane-micro-b-5p-hane-1-8m/
 
- 14 Labcables hane/hane  49kr, link: https://www.electrokit.com/produkt/labbsladd-40-pin-30cm-hane-hane/
+ 14 Jumper cable Male/Male  49kr, link: https://www.electrokit.com/produkt/labbsladd-40-pin-30cm-hane-hane/
 
  Tiltsensor 29kr, link: https://www.electrokit.com/produkt/tiltsensor/
 
