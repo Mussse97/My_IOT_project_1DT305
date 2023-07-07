@@ -1,3 +1,4 @@
+<h1>Alarm system with piezo buzzer</h1>
 Welcome to my internet of things project, my name is Mostafa Hussein (mh225qg) and i have chosen to do an alarm system.
 For this project we want somthing that tells us when a box/drawer has been opened by someone els other than yourself.
 This project took me a bit longer than a week to complete. That said it was a lot of testing and experimenting done. With this guide it should be possible to do within a couple of days or even a day if you really spend the time.
@@ -23,7 +24,7 @@ The materials needed to do this project is as listed:
 
  LED-modul RGB 19kr, link: https://www.electrokit.com/produkt/led-modul-rgb/
 
- Pizo buzzer passive 36kr, link:https://www.electrokit.com/produkt/piezohogtalare-passiv/
+ Piezo buzzer passive 36kr, link:https://www.electrokit.com/produkt/piezohogtalare-passiv/
 
 
 Total cost of everything is 306Kr which is about 25.89 Euro
