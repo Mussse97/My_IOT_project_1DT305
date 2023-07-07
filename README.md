@@ -175,7 +175,7 @@ Then a purple light would appear. I encourage to try out with different tones an
 
 <h1>Transmitting the data / connectivity </h1>
 
-For the transmition of the data we are using wifi as our connectivity. Wifi isnt the best option because it will eat into the battery life, a great option is LoRaWan if you have great connection to helium or ttn (the things network). In my case i had no connection near me with ttn. Even tho i had server all around me with helium it would take a long time to connect and i made the desition in the end to go with somtihing a bit easier like wifi. LoRaWAN also requires to connect a modem to the breadborard that will make it bigger. My box didnt suppert the extra modem.
+For the transmition of the data we are using wifi thru MQTT protocol as our connectivity. Wifi isnt the best option because it will eat into the battery life, a great option is LoRaWan if you have great connection to helium or ttn (the things network). In my case i had no connection near me with ttn. Even tho i had server all around me with helium it would take a long time to connect and i made the desition in the end to go with somtihing a bit easier like wifi. LoRaWAN also requires to connect a modem to the breadborard that will make it bigger. My box didnt suppert the extra modem.
 
 The data we want to send is the values that comes from the tiltswitch that is 1 and 2. This transmition is "triggerd" which means a change in the sensor and not somting we do manually.
 
